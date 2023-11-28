@@ -1,0 +1,163 @@
+
+
+
+<%- include('../../public/common/header') %>
+
+<div class="slider">
+    <div class="slider-wrapper theme-default">
+            <div id="slider" class="nivoSlider">
+                <%
+                    for(let val of slider){
+                        if(val.status==1){%>
+                <img src="/uploads/<%=val.img%>" data-thumb="img/bnr.jpg" alt=""/>
+              <%}}%>
+  
+            </div>
+            <div class="slidertext">
+                    <h1></h1>
+                    <p></p>
+                </div>
+          </div>
+</div>
+
+
+
+
+<div class="type">
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-lg-4">
+                <div class="typebox wow fadeInUp">
+                    <div class="boxtext">
+                            <%if(category!=[] && category[0].status==1){%>
+                        <h1><%=category[0].category%></h1>
+                        <p><%=category[0].category_details.substring(0,100)%></p>
+                            <%}%>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="typebox1 wow fadeInDown">
+                    <div class="boxtext">
+                        <%if(category[1]!=undefined && category[0].status==1){%>
+                        <h1><%=category[1].category%></h1>
+                        <p><%=category[1].category_details.substring(0,100)%></p>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="typebox2 wow fadeInUp">    
+                    <div class="boxtext">
+                        <%if(category[2]!=undefined && category[0].status==1){%>
+                        <h1><%=category[2].category%></h1>
+                        <p><%=category[2].category_details.substring(0,100)%></p>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/para.jpg">
+    
+        <div class="container wow fadeInUp">
+            <h2>Made For You Birthday Packges</h2>
+            <a href="Contact.html">Contact Us Today</a>
+        </div>
+   
+</div>
+
+
+<div class="newproducts">
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-lg-4 col-6">
+                <h2>New Products</h2>
+            </div>
+            <div class="col-lg-8 text-end col-6">
+                <a href="product.html" class="btn btn-info">View All</a>
+            </div>
+
+            <%if(products.length>0){
+                for(let val of products){
+                    if(val.status==1){%>
+            <div class="col-lg-3">
+                <div class="products wow fadeInUp">
+                    <div class="pdtimg">
+                        <img src="uploads/<%=val.img%>">
+                    </div>
+                    <h4><%=val.product%></h4>
+                    <a href="#" class="btn btn-info">Enquery</a>
+                </div>
+            </div>
+            <%}}}%>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/para2.jpg">
+    
+        <div class="container wow fadeInUp">
+            <h2>New Arrival</h2>
+            <a href="new.html">View All</a>
+        </div>
+   
+</div>
+
+
+<div class="creative">
+    <div class="container">
+        <h2>Most Popular Creations</h2>
+        <div class="row">
+            <%if(popular.length>0){
+                for(let val of popular){
+                if(val.status==1){%>
+            <div class="col-lg-4">
+                <div class="creativebox wow fadeInUp">
+                    <div class="cimg">
+                        <img src="uploads/<%=val.img%>">
+                    </div>
+                    <h6><%=val.product%></h6>
+                </div>
+            </div>
+             <%}}}%>
+        </div>
+    </div>
+</div>
+<%- include('../../public/common/footer') %>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- <script src="js/jquery-3.5.0.min.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script type="text/javascript" src="js/scriptsnivo/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+<script src="js/parallax.js"></script>
+<!-- Animate js --> 
+<script src="js/animate.js"></script> 
+
+<!-- WOW file --> 
+<script src="js/wow.js"></script> 
+<script>
+  new WOW().init();
+</script> 
+</body>
+</html>

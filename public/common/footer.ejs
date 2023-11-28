@@ -1,0 +1,45 @@
+<footer>
+    <div class="container wow fadeInDown">
+        <div class="row">
+            <div class="col-lg-3">
+                <%if(about.status==1){%>
+                <h5>About Shop</h5>
+                
+                <p><%=about.about_shop%></p>
+                <%}%>
+            </div>
+            <div class="col-lg-3">
+                <h5>Get In Touch</h5>
+                <ul>
+                    <li><i class="fa fa-map"></i></span>Jagannathpur Road, Kumarpur, Contai, Purba Medinipur, Pin-721401 (West Bengal)</li>
+                    <li><i class="fa fa-phone"></i></span><%=userdata.phone%></li>
+                    <li><i class="fa fa-envelope"></i></span><%=userdata.email%></li>
+                    <li><i class="fa fa-server "></i></span>www.tastycakecontai.net</li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <%if(about.status==1){%>
+                <h5>Our Work Time</h5>
+                
+<p><%=about.worktime%></p>
+<%}%>
+            </div>
+            <div class="col-lg-3">
+                <h5>MAP</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d118562.5646289651!2d87.749863!3d21.777159!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0326e5394d8237%3A0x7bb6b4d525857f71!2sContai%2C+West+Bengal+721401!5e0!3m2!1sen!2sin!4v1531915282710" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="foot">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p class="footleftp">Copyright 2023 @ tastyconfectionery. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="footrightp">Designed & Developed by : TECHPROMIND</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
